@@ -1,0 +1,80 @@
+<html>
+    <title>Random website that i made in my free time</title>
+    <style>
+        body{
+            background-color: rgb(17, 17, 17);
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            font-family: sans-serif;
+        }
+    </style>
+    <script>
+        var h1elements = document.getElementsByTagName("h1");
+        var h2elements = document.getElementsByTagName("h2");
+
+        function startup() {
+            console.log("document has been loaded");
+
+            for(var i = 0; i < h1elements.length; i++) {
+                h1elements[i].style.color = "white";
+            }
+            for(var i = 0; i < h2elements.length; i++) {
+                h2elements[i].style.color = "white";
+            }
+        }
+
+        function playgetout(){
+            var soundgo = new Audio("sound/GET-OUT.mp3")
+            console.log("variable soundgo for GET OUT btn has ben loaded successfully.")
+            soundgo.play();
+            soundgo.onended = function(){
+                console.log("sound ended")
+                console.log("fun fact im writting this at 0:52")
+            }
+        }
+        function playskibidiskibidihawktuah(){
+            var soundssht = new Audio("sound/skibidi-skibidi-hawk-tuah-hawk.mp3")
+            console.log("variable soundssht for cool btn has ben loaded successfully.")
+            soundssht.play();
+            soundssht.onended = function(){
+                console.log("sound ended")
+                console.log("skibidi skibidi hawk tuah")
+            }
+        }
+        function lightmode(){
+            document.body.style.backgroundColor = "white";
+            for(var i = 0; i < h1elements.length; i++) {
+                h1elements[i].style.color = "black";
+            }
+            for(var i = 0; i < h2elements.length; i++) {
+                h2elements[i].style.color = "black";
+            }
+        }
+        function darkmode(){
+            document.body.style.backgroundColor = "rgb(17, 17, 17)";
+            for(var i = 0; i < h1elements.length; i++) {
+                h1elements[i].style.color = "white";
+            }
+            for(var i = 0; i < h2elements.length; i++) {
+                h2elements[i].style.color = "white";
+            }
+        }
+    </script>
+    
+    <head>
+        <body onload="startup();">
+
+            <h1 style="text-align: center;">Hi</h1>
+            <h2 style="text-align: center;">this is the shittiest website that u will ever see</h2>
+            <div style="text-align: center;">
+                <button type="button" onclick="lightmode()">Light mode (masochism)</button>
+                <button type="button" onclick="darkmode()">Dark mode (cool)</button>
+                <button type="button" style="text-align: center;" onclick="playskibidiskibidihawktuah()" >cool button (trust me)</button>
+                <button type="button" style="text-align: center;" onclick="playgetout()" >GET OUT</button>
+            </div>
+        </body>
+    </head>
+</html>
