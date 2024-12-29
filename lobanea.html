@@ -1,0 +1,47 @@
+<html>
+    <title>* lo banea *</title>
+    <style>
+        body{
+            background-color: rgb(17, 17, 17);
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            font-family: sans-serif;
+        }
+    </style>
+    <script>
+        var h1elements = document.getElementsByTagName("h1");
+        var h2elements = document.getElementsByTagName("h2");
+
+        function startup() {
+            console.log("document has been loaded");
+
+            for(var i = 0; i < h1elements.length; i++) {
+                h1elements[i].style.color = "white";
+            }
+            for(var i = 0; i < h2elements.length; i++) {
+                h2elements[i].style.color = "white";
+            }
+        }
+
+        function playgetout(){
+            var soundgo = new Audio("sound/GET-OUT.mp3")
+            console.log("variable soundgo for GET OUT btn has ben loaded successfully.")
+            soundgo.play();
+            soundgo.onended = function(){
+                console.log("sound ended")
+                console.log("fun fact im writting this at 0:52")
+            }
+        }
+    </script>
+    
+    <head>
+        <body onload="startup();">
+
+            <h1 style="text-align: center;">* lo banea *</h1>
+            <h2 style="text-align: center;">(me dio sida)</h2>
+        </body>
+    </head>
+</html>
