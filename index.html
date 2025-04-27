@@ -15,6 +15,10 @@
             position: absolute;
             bottom: 8px;
             left: 16px;
+            width: 300px;
+            height: 300px;
+            max-width: 500px;
+            max-height: 500px;
         }
     </style>
     <script>
@@ -80,6 +84,15 @@
         function lobanea(){
             location.href = "lobanea.html";
         }
+        function squeaksound(){
+            var soundkokusen = new Audio("sound/squeak.mp3")
+            console.log("variable squeak has ben loaded successfully.")
+            soundkokusen.play();
+            soundkokusen.onended = function(){
+                console.log("sound ended")
+                console.log("balls")
+            }
+        }
     </script>
     
     <head>
@@ -96,7 +109,7 @@
                 <a download="toilet-files-reader-writter.exe" href="apps/toilet-files-reader-writter.exe">
                     <button>download .toilet files reader and writter</button>
                 </a>
-                <img class="blahajfrfr" src="images/blahaj.png" alt="images/blahaj.png">
+                <img onclick="squeaksound()" class="blahajfrfr" src="images/blahaj.png" alt="images/blahaj.png">
             </div>
         </body>
     </head>
